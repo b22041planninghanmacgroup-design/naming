@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EIS 시스템 네이밍 후보</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #f0ede8; font-family: 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', sans-serif; }
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  background: #f0ede8;
+}
+.top-bar {
+  grid-column: 1 / -1;
+  border-bottom: 1.5px solid #1a1a1a;
+  padding: 1.4% 2.5% 0.8%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.top-title { font-size: clamp(21px,1.2vw,27px); font-weight: 500; color: #1a1a1a; letter-spacing: -0.01em; }
+.top-sub { font-size: clamp(18px,0.7vw,21px); color: #aaa; }
+
+.col {
+  padding: 0 0 2%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.col-1 { border-right: 0.5px solid #ccc; }
+.col-2 { border-right: 0.5px solid #ccc; }
+.col-1 .col-body, .col-2 .col-body, .col .col-body {
+  padding: 2% 2.5%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sec-tag {
+  font-size: clamp(13px,1vw,17px);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #fff;
+  padding: 3% 2.5% 2.5%;
+  margin-bottom: 0;
+}
+.col-1 .sec-tag { background: #854F0B; }
+.col-2 .sec-tag { background: #185FA5; }
+.col-3 .sec-tag { background: #0F6E56; }
+.big-name {
+  font-size: clamp(24px,3.8vw,54px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #1a1a1a;
+}
+.accent-blue  { color: #185FA5; }
+.accent-teal  { color: #0F6E56; }
+.accent-amber { color: #854F0B; }
+
+.sub-desc {
+  font-size: clamp(18px,0.72vw,21px);
+  color: #555;
+  line-height: 1.55;
+  margin-top: 5%;
+}
+.divider { width: 100%; border: none; border-top: 0.5px solid #ddd; margin: 4% 0; }
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4%; }
+.p {
+  font-size: clamp(18px,0.7vw,21px);
+  padding: 3px 9px;
+  border-radius: 99px;
+  border: 0.5px solid #ccc;
+  color: #555;
+  background: transparent;
+}
+.p.on { background: #1a1a1a; color: #f5f5f5; border-color: #1a1a1a; }
+
+.item-row { display: flex; flex-direction: column; }
+.item { padding: 3.5% 0; border-bottom: 0.5px solid #ddd; }
+.item:last-child { border-bottom: none; }
+.item-name { font-size: clamp(20px,1vw,24px); font-weight: 500; color: #1a1a1a; }
+.item-name span { font-weight: 400; font-size: 0.85em; }
+.item-desc { font-size: clamp(17px,0.65vw,20px); color: #666; margin-top: 2px; line-height: 1.5; }
+.item-hint { color: #aaa; }
+.item-pill {
+  display: inline-block;
+  font-size: clamp(17px,0.58vw,19px);
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 99px;
+  margin-top: 3px;
+}
+.pill-dark  { background: #1a1a1a; color: #f5f5f5; }
+.pill-teal  { background: #E1F5EE; color: #085041; }
+.pill-amber { background: #FAEEDA; color: #633806; }
+
+.eng-abbr { font-size: clamp(17px,0.6vw,19px); color: #185FA5; font-weight: 500; }
+.eng-full  { font-size: clamp(16px,0.56vw,18.5px); color: #aaa; line-height: 1.3; margin-top: 1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top-bar">
+    <span class="top-title">EIS 시스템 네이밍 후보 — Executive Information System · 한맥 경영자정보시스템</span>
+    <span class="top-sub">Hanmac Group · 총괄기획실</span>
+  </div>
+
+  <!-- COL 1 : 직관/실용형 -->
+  <div class="col col-1">
+    <div class="sec-tag">① 직관 · 실용형</div>
+    <div class="col-body">
+    <div class="big-name">경영<br><span class="accent-amber">한눈에</span></div>
+    <div class="sub-desc">시스템의 목적(한눈에 확인)을 그대로 살려<br>별도의 설명 없이도 누구나 이해할 수 있습니다.</div>
+    <div class="pill-row">
+      <span class="p on">경영한눈에</span>
+      <span class="p">한눈에-M</span>
+      <span class="p">하이-경영</span>
+    </div>
+    <hr class="divider">
+    <div class="item-row">
+      <div class="item">
+        <div class="item-name">하이-경영 <span>Hi-Management</span></div>
+        <div class="item-desc">'High(높은 차원의 관리)'와 'Hi(친근한 인사)'의 중의적 의미</div>
+      </div>
+      <div class="item">
+        <div class="item-name">열림 · 알림 · 정돈</div>
+        <div class="item-desc">행동형 — 기능 자체를 동사로 담아 자연스럽게 호칭 가능<br><span class="item-hint">"열림에서 면허 확인해봐"</span></div>
+        <span class="item-pill pill-dark">행동형</span>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- COL 2 : 영어 직관형 -->
+  <div class="col col-2">
+    <div class="sec-tag">② 영어 직관형 (HANMAC 시리즈)</div>
+    <div class="col-body">
+    <div class="big-name">HANMAC<br><span class="accent-blue">PULSE</span></div>
+    <div class="sub-desc">Performance &amp; Unified Live Statistics Engine<br>한맥 경영 활력 지표 — 맥박처럼 뛰는 실시간 경영 데이터</div>
+    <div class="pill-row">
+      <span class="p on">H-PULSE</span>
+      <span class="p">H-VIEW</span>
+      <span class="p">H-CORE</span>
+      <span class="p">H-LINK</span>
+      <span class="p">H-DASH</span>
+    </div>
+    <hr class="divider">
+    <div class="item-row">
+      <div class="item">
+        <div class="eng-abbr">H-VIEW</div>
+        <div class="eng-full">Visual Intelligence for Executive Wisdom</div>
+        <div class="item-name">HANMAC-VIEW</div>
+        <div class="item-desc">한맥가족 경영 통찰 대시보드</div>
+      </div>
+      <div class="item">
+        <div class="eng-abbr">H-CORE</div>
+        <div class="eng-full">Central Operations &amp; Real-time Evaluation</div>
+        <div class="item-name">HANMAC-CORE</div>
+        <div class="item-desc">한맥 통합 경영 본부 (실시간 데이터 군집)</div>
+      </div>
+      <div class="item">
+        <div class="eng-abbr">H-LINK &nbsp;/&nbsp; H-DASH</div>
+        <div class="item-name">HANMAC-LINK · HANMAC-DASH</div>
+        <div class="item-desc">리더 정보 네트워크 · 디지털 전략 허브</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- COL 3 : 한글 직관형 -->
+  <div class="col col-3">
+    <div class="sec-tag">③ 한글 직관형</div>
+    <div class="col-body">
+    <div class="big-name">다봄<br><span class="accent-teal" style="font-size:0.55em;letter-spacing:-0.01em;">Da-Bom</span></div>
+    <div class="sub-desc">"다 본다" — 면허부터 매출까지<br>이 시스템 하나로 다 볼 수 있다는 직관적인 이름</div>
+    <div class="pill-row">
+      <span class="p on">다봄</span>
+      <span class="p">경영콕</span>
+      <span class="p">알찬</span>
+    </div>
+    <hr class="divider">
+    <div class="item-row">
+      <div class="item">
+        <div class="item-name">경영콕 <span>/ 비즈콕</span></div>
+        <div class="item-desc">마우스 클릭 한 번으로 모든 지표를 '콕' 집어 확인</div>
+        <span class="item-pill pill-teal">친근함</span>
+      </div>
+      <div class="item">
+        <div class="item-name">알찬 <span>Al-Chan</span></div>
+        <div class="item-desc">알짜 정보(실적과 자격)를 알차게 한눈에 보여주는 대시보드</div>
+        <span class="item-pill pill-amber">재치있음</span>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
